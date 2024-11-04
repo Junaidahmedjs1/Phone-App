@@ -37,7 +37,7 @@ else{
 const div = document.querySelector("#container")
 
 
-mobileBrands.map((item , index)=>{
+mobileBrands.map((item,index)=>{
     div.innerHTML +=` <div id = "cards" class="card border border-white p-5 rounded w-25 " >
     <img width = "100%" src="${item.imageUrl}" alt="${item.name}" class="card-image" />
             <h1 class="text-primary text-center fs-2 mt-2 "> ${item.name}</h1>
@@ -59,8 +59,9 @@ function addToCart(index){
     }
     console.log(cartItem);
     Swal.fire({
-        title: "Good job!",
-        text: "Item added to cart successfully!",
+        position: "top-end",
+        title: "GOOD JOB!",
+        text: "ITEM ADDDED TO CART SUCCESSFULLY!",
         icon: "success",
       });
     
@@ -68,9 +69,7 @@ function addToCart(index){
 }
 
 function checkout(){
-    console.log("checkout");
     const convertArrToStr = JSON.stringify(cartItem);
-    localStorage.setItem("cart" , convertArrToStr);
-    window.location = "cart.html"
-    
-}
+    localStorage.setItem("cart", convertArrToStr);
+    window.location = "cart.html";
+    }

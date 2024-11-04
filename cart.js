@@ -20,7 +20,7 @@ function render() {
                 <h1 class="text-primary text-center fs-2 mt-2 "> ${item.name}</h1>
                 <p class= "fs-4 mt-2 fw-bold text-center">BRAND: ${item.brand}</p>
                 <h1 class="text-danger text-center" > $${item.price * item.quantity}</h1>
-                <p class = "fs-4 fw-bold mt-2 text-center">QUANTITY:
+                <p class = "fs-5 fw-bold mt-2 text-center">QUANTITY:
                     <button class="btn btn-primary" onclick="decBtn(${index})">-</button>
                     ${item.quantity}
                     <button class="btn btn-primary" onclick="incBtn(${index})">+</button>
@@ -51,11 +51,12 @@ function decBtn(index) {
 
 function buyItem(index){
     Swal.fire({
-        title: "MUBARAK HU !",
-        text: "APKA ORDER PLACED HUGYA HAI",
+        position: "top-end",
         icon: "success",
+        title: "MUBARAK HU APKA ORDER PLACED HUGYA HAI",
+        showConfirmButton: false,
+        
       });
-
     console.log(globalArray);
     
 }
