@@ -9,6 +9,8 @@ if (cartItems === null) {
 const div = document.querySelector("#contain");
 const totalAm = document.querySelector("#total-amount");
 
+
+
 function render() {
     div.innerHTML = ''; 
     let total = 0;
@@ -25,7 +27,21 @@ function render() {
                     ${item.quantity}
                     <button class="btn btn-primary" onclick="incBtn(${index})">+</button>
                 </p>
-                <button class="mx-5 btn btn-danger mt-2" onclick="buyItem(${index})">Buy Now</button>
+                <button class="order"><span class="default">ORDER NOW</span><span class="success">Order Placed
+                <svg viewbox="0 0 12 10">
+                <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+                </svg></span>
+                <div class="box"></div>
+                <div class="truck">
+                <div class="back"></div>
+                <div class="front">
+                <div class="window"></div>
+                </div>
+                <div class="light top"></div>
+                <div class="light bottom"></div>
+                </div>
+                <div class="lines"></div>
+  
 
                 <button class="mx-5 btn btn-danger mt-3" onclick="deleteItem(${index})">Delete</button>
             </div>`
@@ -49,17 +65,18 @@ function decBtn(index) {
     render();
 }
 
-function buyItem(index){
-    Swal.fire({
-        position: "top-end",
-        icon: "success",
-        title: "MUBARAK HU APKA ORDER PLACED HUGYA HAI",
-        showConfirmButton: false,
-        
-      });
-    console.log(globalArray);
-    
-}
+$('.order').click(function (e) {
+
+    let button = $(this);
+  
+    if (!button.hasClass('animate')) {
+      button.addClass('animate');
+      setTimeout(() => {
+        button.removeClass('animate');
+      }, 10000);
+    }
+  
+  });
 
 function deleteItem(index) {
     globalArray.splice(index, 1); 
