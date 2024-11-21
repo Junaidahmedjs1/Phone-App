@@ -27,20 +27,7 @@ function render() {
                     ${item.quantity}
                     <button class="btn btn-primary" onclick="incBtn(${index})">+</button>
                 </p>
-                <button class="order"><span class="default">ORDER NOW</span><span class="success">Order Placed
-                <svg viewbox="0 0 12 10">
-                <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
-                </svg></span>
-                <div class="box"></div>
-                <div class="truck">
-                <div class="back"></div>
-                <div class="front">
-                <div class="window"></div>
-                </div>
-                <div class="light top"></div>
-                <div class="light bottom"></div>
-                </div>
-                <div class="lines"></div>
+                
   
 
                 <button class="mx-5 btn btn-danger mt-3" onclick="deleteItem(${index})">Delete</button>
